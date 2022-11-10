@@ -1,5 +1,5 @@
 " Vim plugin
-" Last Change: 18.10.2022
+" Last Change: 10.11.2022
 " Maintainer: Damian Piotrowski <dapiotrowski93@gmail.com>
 " License:	This file is placed in the public domain.
 
@@ -50,7 +50,8 @@ fun s:OpenTerm()
       endif
     endif
   else
-    execute('bo term')
+    execute('bo new')
+    execute('term')
     if exists("g:openTermMaxHeight")
       execute('resize ' . g:openTermMaxHeight)
     endif
